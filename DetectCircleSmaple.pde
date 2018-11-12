@@ -23,14 +23,14 @@ void draw() {
 }
 
 void drwCircles(Mat circles) {
-  double[] data;
-  double rho;
-  Point pt = new Point();
+  pushStyle();
+  ellipseMode(RADIUS);
   for (int i = 0; i < circles.cols(); i++) {
-    data = circles.get(0, i);
-    pt.x = data[0];
-    pt.y = data[1];
-    rho = data[2];
-    ellipse((float)pt.x, (float)pt.y, (float)rho * 2, (float)rho * 2);
+    double[] data = circles.get(0, i);
+    float x = (float)data[0];
+    float y = (float)data[1];
+    float rad = (float)data[2];
+    ellipse(x, y, rad, rad);
   }
+  popStyle();
 }
