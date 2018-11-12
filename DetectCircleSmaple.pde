@@ -7,8 +7,8 @@ Mat circles;
 
 void setup() {
   System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-  PImage src = loadImage("buttons.png");
   size(200, 200);
+  PImage src = loadImage("buttons.png");
   opencv = new OpenCV(this, src);
   circles = new Mat();
   // https://docs.opencv.org/3.4/javadoc/org/opencv/imgproc/Imgproc.html#HoughCircles-org.opencv.core.Mat-org.opencv.core.Mat-int-double-double-
