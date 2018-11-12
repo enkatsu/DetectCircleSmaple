@@ -19,10 +19,10 @@ void draw() {
   // image(opencv.getOutput(), 0, 0);
   image(opencv.getInput(), 0, 0);
   fill(255, 0, 0, 100);
-  drwCircles(circles);
+  drawCircles(circles);
 }
 
-void drwCircles(Mat circles) {
+void drawCircles(Mat circles) {
   pushStyle();
   ellipseMode(RADIUS);
   for (int i = 0; i < circles.cols(); i++) {
